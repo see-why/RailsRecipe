@@ -1,11 +1,7 @@
-<section>
-<%= link_to 'Add Food', new_food_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary btn-lg'}  %>
-<div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content"></div>
-  </div>
-</div>
-  <table>
+<section class="food-index-section d-flex">
+<%= link_to 'Add Food', new_food_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'add-food-link'}  %>
+
+  <table class="food-table">
       <tr>
         <th>Food</th>
         <th>Measurement Unit</th>
@@ -17,7 +13,7 @@
           <td><%= food.name %></td>
           <td><%= food.measurement_unit %></td>
           <td><%= food.price %></td>
-          <td><%= render partial: "delete_food", local: food %></td>
+          <td><%= render partial: "delete_food", local: @food = food %></td>
         </tr>
       <%end %>
   </table>
