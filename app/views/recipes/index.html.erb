@@ -3,12 +3,10 @@
   <% @recipes.each do |recipe| %>
     <div class="recipe-card">
      <div class="recipe-header">
-       <h2>Name</h2>
+       <h2><%=recipe.name%></h2>
         <button>Delete</button>
       </div>
-     <p class="recipe-description">
-         Velit adipisicing veniam incididunt nulla incididunt sint do reprehenderit enim ipsum enim velit. Mollit irure sint eiusmod sit exercitation consequat laborum minim veniam. Eu dolor officia do commodo.
-     </p>
+     <p class="recipe-description"><%=recipe.description%></p>
    </div>
 <%end%>
 </div>
