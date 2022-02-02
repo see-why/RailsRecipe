@@ -1,0 +1,20 @@
+<section>
+  
+  <table>
+      <tr>
+        <th>Food</th>
+        <th>Measurement Unit</th>
+        <th>Unit Price</th>
+        <th>Actions</th>
+      </tr>
+      <% @foods.each do |food| %>
+        <tr>
+          <td><%= food.name %></td>
+          <td><%= food.measurement_unit %></td>
+          <td><%= food.price %></td>
+          <td><%= render partial: "delete_post", local: food %></td>
+        </tr>
+      <%end %>
+  </table>
+
+</section>
