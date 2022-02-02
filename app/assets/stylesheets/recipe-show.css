@@ -14,6 +14,7 @@
   font-size: 1.5rem;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  margin-bottom: 0;
 }
 
 .info-listing-container > li:nth-child(1) {
@@ -41,4 +42,59 @@
 
 .not-public {
   background-color: rgb(199, 18, 18);
+}
+
+.recipe-single-description > p {
+  margin: 0 0 0 40px;
+  font-size: 1.5rem;
+}
+
+.food-section {
+  margin: 25px 40px 0 40px;
+}
+
+.adding-btns {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid gray;
+  padding: 15px 0;
+}
+
+.adding-btns > button {
+  padding: 1.5% 2%;
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: wheat;
+}
+
+table.foodtable {
+  margin-top: 30px;
+  width: 100%;
+  background-color: #fff;
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+
+table.foodtable td,
+table.foodtable th {
+  padding: 3px;
+  border-left: 2px solid black;
+}
+
+table.foodtable th {
+  border: 2px solid black;
+  height: 50px;
+  width: 25%;
+  color: white;
+  background-color: #6b6b6bb6;
+}
+
+table.foodtable td {
+  height: 110px;
+}
+
+table.foodtable tr:nth-child(2n+1) {
+  background-color: #b6b6b6;
 }
