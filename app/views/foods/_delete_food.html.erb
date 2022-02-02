@@ -1,0 +1,3 @@
+<% if can? :destroy, @food%>
+    <%=button_to 'Delete', {:controller => :foods, :action => 'destroy', :id => @food.id}, :method => :delete%> 
+<% end %>
