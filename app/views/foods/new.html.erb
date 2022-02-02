@@ -1,13 +1,13 @@
-<%= form_with url: user_posts_path, scope: :data do |form| %>
+<%= form_with url: "/foods", scope: :food do |form| %>
   <div class="form-container d-flex">
     <section class="title-section from-input d-flex">
       <%= form.text_field :name, placeholder: "Food Name", required: true %>
     </section>
     <section class="title-section from-input d-flex">
-      <%= form.text_field :measurement_unit, placeholder: "Measurement Unit", required: true %>
+      <%= form.select :measurement_unit, ["grams", "units"], placeholder: "Measurement Unit", required: true %>
     </section>
     <section class="title-section from-input d-flex">
-    <%= form.text_field :price, placeholder: "Unit Price", required: true %>
+    <%= form.number_field :price, placeholder: "Unit Price", required: true %>
   </section>
     <%= form.submit "Save", class: "submit-btn" %>
     </div>
