@@ -33,18 +33,17 @@
     </tr>
   </thead>
   <tbody>
+  <% unless @recipe.recipe_foods.empty? %>
+  <% @recipe.recipe_foods.each do |food|%>
     <tr>
-      <td>Cell</td>
-      <td>Cell</td>
-      <td>Cell</td>
+      <td><%= food.food.name %></td>
+      <td><%= food.quantity %></td>
+      <td><%= food.quantity*food.food.price %></td>
       <td>Cell</td>
     </tr>
-    <tr>
-      <td>Cell</td>
-      <td>Cell</td>
-      <td>Cell</td>
-      <td>Cell</td>
-    </tr>
+  <% end %>
+  <% end %>
   </tbody>
 </table>
 </div>
+<% console %>
