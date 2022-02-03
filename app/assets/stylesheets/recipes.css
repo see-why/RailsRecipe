@@ -24,8 +24,8 @@
   margin: 25px 0;
 }
 
-.recipe-header > h2 {
-  margin: 0;
+.recipe-header > a > h2 {
+  margin: 0 0 10px 0;
 }
 
 .recipe-header > button {
