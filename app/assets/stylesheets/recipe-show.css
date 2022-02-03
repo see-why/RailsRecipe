@@ -8,7 +8,7 @@
 
 .info-listing-container {
   list-style-type: none;
-  width: 100%;
+  width: 90%;
   height: 140px;
   display: grid;
   font-size: 1.5rem;
@@ -102,13 +102,13 @@ table.foodtable tr:nth-child(2n+1) {
 /* modal */
 
 .fixed-modal-container {
+  z-index: 1;
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   height: 65%;
   width: 50%;
-  background-color: red;
 }
 
 .main-modal-container {
@@ -116,4 +116,34 @@ table.foodtable tr:nth-child(2n+1) {
   width: 100%;
   display: flex;
   flex-direction: column;
+  border: 1px solid rgb(177, 177, 177);
+  border-radius: 8px;
+  background-color: rgb(218, 218, 218);;
+}
+
+.closing-btn {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  border: none;
+  height: 25px;
+  width: 25px;
+  background-color: rgb(109, 14, 14);
+  cursor: pointer;
+  color: white;
+  border-radius: 50%;
+}
+
+.blurred {
+  filter: blur(4px);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.open {
+  display: block;
+}
+
+.close {
+  display: none;
 }

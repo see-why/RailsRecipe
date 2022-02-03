@@ -1,5 +1,17 @@
-<div class="fixed-modal-container">
+<div class="fixed-modal-container close">
   <div class="main-modal-container">
-    
+    <h1>Add ingredient<h2>
+    <button class="closing-btn">X</button>
+    <%= form_with url: "recipe_recipe_foods_path(@recipe.id)", scope: :food do |form| %>
+    <section class="text-box d-flex">
+      <%= form.label "Food", "Measurement Unit", class: "unit-label" %>
+      <%= form.select :food_id, "@foods.collect { |food| [food.name, food.id] }", class: "full-width", placeholder: "Select ingredient", required: true %>
+    </section>
+    <section class="text-box d-flex">
+    <%= form.number_field :price, placeholder: "Quantity", class: "full-width", required: true %>
+  </section>
+    <%= form.submit "Save", class: "save-ingredient-button" %>
+    </div>
+  <% end %>
   </div>
 </div>
