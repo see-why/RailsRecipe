@@ -39,11 +39,14 @@
       <td><%= food.food.name %></td>
       <td><%= food.quantity %></td>
       <td><%= food.quantity*food.food.price %></td>
-      <td>Cell</td>
+      <td>
+      <%= button_to "Delete", recipe_recipe_food_path(@recipe.id, food.id), :method => :delete,
+      class:"delete-recipe-food" %>
+      
+      </td>
     </tr>
   <% end %>
   <% end %>
   </tbody>
 </table>
 </div>
-<% console %>
