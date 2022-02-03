@@ -4,7 +4,7 @@
     <button class="closing-btn">X</button>
     <%= form_with url: "recipe_recipe_foods_path(@recipe.id)", scope: :food do |form| %>
     <section class="text-box d-flex">
-      <%= form.label "Food", "Measurement Unit", class: "unit-label" %>
+      <%= form.label "Food", class: "unit-label" %>
       <%= form.select :food_id, "@foods.collect { |food| [food.name, food.id] }", class: "full-width", placeholder: "Select ingredient", required: true %>
     </section>
     <section class="text-box d-flex">
