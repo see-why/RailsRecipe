@@ -1,0 +1,36 @@
+<%= form_with url: "/recipe", scope: :recipe do |form| %>
+  <div class="fixed-rform-container d-flex">
+
+    <div class="main-form-container d-flex">
+      <div class="field-recipe field-recipe-name">
+        <%= form.label "Recipe Name" %> <br />
+        <%= form.text_field :name, placeholder: "name..", class: "", required: true %>
+      </div>
+
+      <div class="time-info d-flex">
+        <div class="field-recipe field-recipe-prep">
+        <%= form.label "Preparation time" %> <br />
+        <%= form.number_field :prep_time, placeholder: "in hours..", class: "", required: true %>
+        </div>
+        <div class="field-recipe field-recipe-cook">
+        <%= form.label "Cooking time" %> <br />
+        <%= form.number_field :cook_time, placeholder: "in hours..", class: "", required: true %>
+        </div>
+      </div>
+
+      <div class="field-recipe field-recipe-instruction">
+        <%= form.label "Instructions" %> <br />
+        <%= form.text_area :description, placeholder: "in hours..", class: "", required: true %>
+      </div>
+
+      <div class="field-recipe d-flex">
+        <%= form.check_box :public, class:"checkbox" %> <br />
+        <%= form.label "Public" %> <br />
+      </div>
+      
+      <div class="recipe-submit-btn-cnt">
+        <%= form.submit "Create", class: "save-recipe-button" %>
+      </div>
+    </div>
+  </div>
+<% end %>
