@@ -2,16 +2,33 @@
   <div class="main-modal-container">
     <h1>Add ingredient<h2>
     <button class="closing-btn">X</button>
-    <%= form_with url: "recipe_recipe_foods_path(@recipe.id)", scope: :food do |form| %>
-    <section class="text-box d-flex">
-      <%= form.label "Food", class: "unit-label" %>
-      <%= form.select :food_id, "@foods.collect { |food| [food.name, food.id] }", class: "full-width", placeholder: "Select ingredient", required: true %>
-    </section>
-    <section class="text-box d-flex">
-    <%= form.number_field :price, placeholder: "Quantity", class: "full-width", required: true %>
-  </section>
-    <%= form.submit "Save", class: "save-ingredient-button" %>
+    <% if @foods.empty? %>
+      <p> no foods, please add some </p>
+    <% else %>
+      <%= form_with url: recipe_recipe_foods_path(@recipe.id), scope: :recipe_foods do |form| %>
+      <section class="text-box d-flex">
+        <%= form.label "Food", class: "unit-label" %>
+        <%= form.select :food_id, @foods.collect { |food| [food.name, food.id] }, class: "full-width", placeholder: "Select ingredient", required: true %>
+      </section>
+      <section class="text-box d-flex">
+        <%= form.number_field :quantity, placeholder: "Quantity", class: "full-width", required: true %>
+      </section>
+        <%= form.submit "Save", class: "save-ingredient-button" %>
     </div>
+  <% end %>
   <% end %>
   </div>
 </div>
+
+<script type="text/javascript">
+function popupIngModal() {
+  document.querySelector('.main-recipe-show-page').classList.add('blurred')
+  document.querySelector(".fixed-modal-container").classList.remove('close')
+}
+function closeIngModal() {
+  document.querySelector('.main-recipe-show-page').classList.remove('blurred')
+  document.querySelector(".fixed-modal-container").classList.add('close')
+}
+document.querySelector(".hehe").addEventListener('click', popupIngModal);
+document.querySelector(".closing-btn").addEventListener('click', closeIngModal);
+</script>

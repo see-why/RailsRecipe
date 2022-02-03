@@ -1,4 +1,4 @@
-<%= render 'add_food_modal' %>
+<%= render 'add_food_modal', locals: { recipe: @recipe, foods: @foods } %>
 <div class="main-recipe-show-page">
 <h1 class="show-recipe-header"><%= @recipe.name%></h1>
 <section class="recipe-single-info">

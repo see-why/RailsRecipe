@@ -118,7 +118,7 @@ table.foodtable tr:nth-child(2n+1) {
   flex-direction: column;
   border: 1px solid rgb(177, 177, 177);
   border-radius: 8px;
-  background-color: rgb(218, 218, 218);;
+  background-color: rgb(218, 218, 218);
 }
 
 .closing-btn {
