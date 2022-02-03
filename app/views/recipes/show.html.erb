@@ -1,3 +1,5 @@
+<%= render 'add_food_modal' %>
+<div class="main-recipe-show-page" style="display:none;">
 <h1 class="show-recipe-header"><%= @recipe.name%></h1>
 <section class="recipe-single-info">
   <ul class="info-listing-container">
@@ -18,7 +20,7 @@
 <section class="food-section">
   <div class="adding-btns">
     <button>Generate shopping list</button>
-    <button>Add ingredient</button>
+    <button class="hehe">Add ingredient</button>
   </div>  
 
 <table class="foodtable">
@@ -45,3 +47,4 @@
     </tr>
   </tbody>
 </table>
+</div>

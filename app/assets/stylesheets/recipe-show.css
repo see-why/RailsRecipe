@@ -98,3 +98,22 @@ table.foodtable td {
 table.foodtable tr:nth-child(2n+1) {
   background-color: #b6b6b6;
 }
+
+/* modal */
+
+.fixed-modal-container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 65%;
+  width: 50%;
+  background-color: red;
+}
+
+.main-modal-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
