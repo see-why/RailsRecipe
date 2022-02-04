@@ -1,6 +1,6 @@
 class FoodsController < ApplicationController
   def index
-    @user = User.find(current_user.id)
+    @user = User.includes(:foods).find(current_user.id)
     @foods = @user.foods
   end
 
