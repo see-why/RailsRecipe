@@ -13,7 +13,6 @@ class FoodsController < ApplicationController
 
   def create
     new_food = current_user.foods.new(food_params)
-    new_food.user_id = current_user.id
     if new_food.save
       redirect_to '/foods', notice: 'Success!'
     else

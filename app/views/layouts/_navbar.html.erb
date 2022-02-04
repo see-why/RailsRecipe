@@ -1,0 +1,13 @@
+<% if user_signed_in? %>
+<header>
+  <div>
+    <navbar class="navbar">
+    <%= button_to "Home", users_path, :method => :get, class:"nav-link" %>
+    <%= button_to "Foods", foods_path, :method => :get, class:"nav-link" %>
+    <%= button_to "Recipes",  recipes_path, :method => :get, class:"nav-link" %>
+    <%= button_to "Public Recipes", public_recipes_path, :method => :get, class:"nav-link" %>
+    <%= button_to "Log-out", destroy_user_session_path, :method => :delete, class:"nav-link" %>
+    </navbar>
+  </div>
+</header>
+<% end %>

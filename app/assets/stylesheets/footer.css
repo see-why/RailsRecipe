@@ -1,0 +1,12 @@
+.footer-div {
+  background: #a9a9a9;
+  justify-content: end;
+  padding-right: 2%;
+  display: flex;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

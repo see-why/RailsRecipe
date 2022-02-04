@@ -1,0 +1,17 @@
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  margin: 0% 5%;
+}
+
+button.nav-link {
+  border: none;
+  width: 100%;
+}
+
+.navbar form.button_to {
+  margin: 0 2%;
+}
