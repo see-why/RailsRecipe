@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 2022_01_31_213834) do
 
   create_table "recipes", force: :cascade do |t|
     t.string "name"
-    t.integer "prep_time"
-    t.integer "cook_time"
+    t.decimal "prep_time"
+    t.decimal "cook_time"
     t.text "description"
     t.boolean "public"
     t.datetime "created_at", precision: 6, null: false
