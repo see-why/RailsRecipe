@@ -1,0 +1,42 @@
+<div class="general-container d-flex">
+
+<section class="shopping-table-section">
+<table class="foodtable shopping-foodtable">
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+<% @shopping.each do |recipe| %>
+  <% unless recipe.recipe_foods.empty? %>
+    <% recipe.recipe_foods.each do |rf| %>
+      <tr>
+      <% current_price =  rf.quantity * rf.food.price%>
+      <% @prices += current_price %>
+      <%  @food_items += 1 %>
+      <td><%= rf.food.name %></td>
+      <td><%= rf.quantity %></td>
+      <td><%= current_price  %></td>
+      </tr>
+    <%end%>
+  <% end %>
+<%end%>
+
+  </tbody>
+</table>
+</section>
+
+
+<section class="shopping-list-header d-flex">
+  <h1>Shopping list<h1>
+  <div class="shopping-list-calculation d-flex">
+  <% current_price = 0%>
+    <p>Amount of food items to buy: <%=@food_items%></p>
+    <p>Total value of food needed: <%=@prices%></p>
+  </div>
+</section>
+
+</div>
