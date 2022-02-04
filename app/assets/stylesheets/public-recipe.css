@@ -1,0 +1,10 @@
+.public-recipe-section {
+  flex-direction: column;
+  margin: 0% 10%;
+  width: 80%;
+  text-align: center;
+}
+
+.align-center {
+  align-self: center;
+}
