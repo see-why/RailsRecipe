@@ -1,4 +1,5 @@
 .general-container {
+  margin-top: 50px;
   width: 100%;
   flex-direction: column-reverse;
   align-items: center;
