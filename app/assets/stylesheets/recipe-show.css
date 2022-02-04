@@ -27,6 +27,7 @@
 
 .pub-recipe {
   grid-area: 1 / 5 / 2 / 6;
+  place-self: center;
 }
 
 .is-public,
@@ -60,9 +61,10 @@
   padding: 15px 0;
 }
 
-.adding-btns > button {
+.adding-btns > button,
+.gsl-btn {
   padding: 1.5% 2%;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   border: none;
   border-radius: 8px;
