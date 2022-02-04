@@ -1,1 +1,13 @@
-<h1>Public Recipes</h1>
+<section class="d-flex public-recipe-section">
+  <h1>Public Recipes</h1>
+
+  <% @public_recipes.each do |recipe| %>
+    <div class="recipe-card align-center">
+     <div class="recipe-header">
+        <%= link_to recipe.name, recipe_path(recipe.id), class:"logout-btn" %>
+        <span>By: <%= recipe.user.name %></span>
+      </div>
+     <p class="recipe-description"><%=recipe.description%></p>
+    </div>
+  <%end%>
+</section>
