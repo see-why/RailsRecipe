@@ -92,7 +92,7 @@ table.foodtable th {
 }
 
 table.foodtable td {
-  height: 110px;
+  height: 80px;
 }
 
 table.foodtable tr:nth-child(2n+1) {

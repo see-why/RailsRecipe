@@ -1,0 +1,20 @@
+.general-container {
+  width: 100%;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.shopping-list-header {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.shopping-table-section {
+  width: 65%;
+  margin-bottom: 20px;
+}
+
+.shopping-list-calculation > p {
+  margin: 0 40px;
+}
