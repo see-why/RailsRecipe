@@ -14,9 +14,8 @@ class RecipesController < ApplicationController
 
   def create
     new_recipe = current_user.recipes.new(recipe_params)
-    new_recipe.user_id = current_user.id
     if new_recipe.save
-      redirect_to '/recipes', notice: 'Success!'
+      redirect_to recipe_path(new_recipe.id), notice: 'Success!'
     else
       render :new, alert: 'Error occured!'
     end
@@ -25,9 +24,9 @@ class RecipesController < ApplicationController
   def destroy
     @recipe = Recipe.find(params[:id])
     if @recipe.destroy
-      redirect_to '/recipes', notice: 'Successfully deleted!'
+      redirect_to recipes_path, notice: 'Successfully deleted!'
     else
-      redirect_to '/recipes', alert: 'Error occured!'
+      redirect_to recipes_path, alert: 'Error occured!'
     end
   end
 
