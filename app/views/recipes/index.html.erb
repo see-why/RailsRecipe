@@ -1,0 +1,12 @@
+<div class="recipe-container">
+  <%= button_to "Add a new recipe", new_recipe_path, class:"logout-btn", :method => :get %>
+  <% @recipes.each do |recipe| %>
+    <div class="recipe-card">
+     <div class="recipe-header">
+     <%= link_to recipe.name, recipe_path(recipe.id), class:"logout-btn" %>
+        <%= button_to "Delete", recipe_path(recipe.id), :method => :delete, class:"delete-recipe-btn" %>
+      </div>
+     <p class="recipe-description"><%=recipe.description%></p>
+   </div>
+<%end%>
+</div>

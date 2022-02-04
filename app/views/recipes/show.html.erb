@@ -1,0 +1,52 @@
+<%= render 'add_food_modal', locals: { recipe: @recipe, foods: @foods } %>
+<div class="main-recipe-show-page">
+<h1 class="show-recipe-header"><%= @recipe.name%></h1>
+<section class="recipe-single-info">
+  <ul class="info-listing-container">
+    <li>Preparation time: <%=@recipe.prep_time%> hour </li>
+    <li>Cooking time: <%=@recipe.prep_time%> hour </li>
+    <% if @recipe.public %>
+    <li class ="pub-recipe"><span class="is-public">Public</span></li>
+    <% else %>
+    <li class ="pub-recipe"><span class="not-public">Public</span></li>
+    <% end %>
+  </ul>
+</section>
+
+<section class="recipe-single-description">
+  <p><%=@recipe.description%></p>
+</section>
+
+<section class="food-section">
+  <div class="adding-btns">
+    <button>Generate shopping list</button>
+    <button class="add-ing-btn">Add ingredient</button>
+  </div>  
+
+<table class="foodtable">
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Value</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% unless @recipe.recipe_foods.empty? %>
+  <% @recipe.recipe_foods.each do |food|%>
+    <tr>
+      <td><%= food.food.name %></td>
+      <td><%= food.quantity %></td>
+      <td><%= food.quantity*food.food.price %></td>
+      <td>
+      <%= button_to "Delete", recipe_recipe_food_path(@recipe.id, food.id), :method => :delete,
+      class:"delete-recipe-food" %>
+      
+      </td>
+    </tr>
+  <% end %>
+  <% end %>
+  </tbody>
+</table>
+</div>
