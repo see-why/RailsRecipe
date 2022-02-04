@@ -10,11 +10,11 @@
       <div class="time-info d-flex">
         <div class="field-recipe field-recipe-prep">
         <%= form.label "Preparation time" %> <br />
-        <%= form.number_field :prep_time, placeholder: "in hours..", class: "", required: true %>
+        <%= form.number_field :prep_time, placeholder: "in hours..", class: "", step: "any", required: true %>
         </div>
         <div class="field-recipe field-recipe-cook">
         <%= form.label "Cooking time" %> <br />
-        <%= form.number_field :cook_time, placeholder: "in hours..", class: "", required: true %>
+        <%= form.number_field :cook_time, placeholder: "in hours..", class: "", step: "any", required: true %>
         </div>
       </div>
 
