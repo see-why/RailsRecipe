@@ -4,7 +4,7 @@
 
 .food-index-section {
   flex-direction: column;
-  margin: 10% 10%;
+  margin: 0% 10%;
   padding: 5%;
 }
 
@@ -37,5 +37,5 @@
   padding-bottom: 12px;
   text-align: left;
   background-color: #04aa6d;
-  color: white;
+  color: #fff;
 }
