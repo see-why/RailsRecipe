@@ -1,0 +1,21 @@
+<section class="food-index-section d-flex">
+<%= link_to 'Add Food', new_food_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'add-food-link'}  %>
+
+  <table class="food-table">
+      <tr>
+        <th>Food</th>
+        <th>Measurement Unit</th>
+        <th>Unit Price</th>
+        <th>Actions</th>
+      </tr>
+      <% @foods.each do |food| %>
+        <tr>
+          <td><%= food.name %></td>
+          <td><%= food.measurement_unit %></td>
+          <td><%= food.price %></td>
+          <td><%= render partial: "delete_food", local: @food = food %></td>
+        </tr>
+      <%end %>
+  </table>
+
+</section>

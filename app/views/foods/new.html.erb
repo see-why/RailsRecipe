@@ -1,0 +1,15 @@
+<%= form_with url: "/foods", scope: :food do |form| %>
+  <div class="new-food-form d-flex">
+    <section class="text-box d-flex">
+      <%= form.text_field :name, placeholder: "Food Name", class: "full-width", required: true %>
+    </section>
+    <section class="text-box d-flex">
+      <%= form.label :measurement_unit, "Measurement Unit", class: "unit-label" %>
+      <%= form.select :measurement_unit, ["grams", "units"], class: "full-width", placeholder: "Measurement Unit", required: true %>
+    </section>
+    <section class="text-box d-flex">
+    <%= form.number_field :price, placeholder: "Unit Price", class: "full-width", required: true %>
+  </section>
+    <%= form.submit "Save", class: "save-food-button" %>
+    </div>
+<% end %>
