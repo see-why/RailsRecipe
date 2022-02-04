@@ -8,7 +8,7 @@ A ruby on rails app for displaying and creating recipes from a food list, you ca
 
 ## Getting Started
 
-- Run git clone https://github.com/AmineHLub/blog-app to get a local clone
+- Run git clone https://github.com/see-why/RailsRecipe.git to get a local clone
 
 ### Prerequisites
 
@@ -17,7 +17,7 @@ A ruby on rails app for displaying and creating recipes from a food list, you ca
 
 ### Run
 
-Run rails db:create db:migrate db:seed
+Run rails db:create db:migrate
 
 P.S : if you are coming from a previous version, you might want to delete the database by running rails db:drop (BECAREFUL that all previous data will be deleted)
 
