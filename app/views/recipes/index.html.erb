@@ -3,7 +3,7 @@
   <% @recipes.each do |recipe| %>
     <div class="recipe-card">
      <div class="recipe-header">
-     <%= link_to recipe.name, recipe_path(recipe.id), class:"logout-btn" %>
+        <%= link_to recipe.name, recipe_path(recipe.id), class:"logout-btn" %>
         <%= button_to "Delete", recipe_path(recipe.id), :method => :delete, class:"delete-recipe-btn" %>
       </div>
      <p class="recipe-description"><%=recipe.description%></p>
