@@ -6,6 +6,9 @@ A ruby on rails app for displaying and creating recipes from a food list, you ca
 - Ruby
 - RoR
 
+## Live Demo
+- [Click Me!](https://calm-thicket-18487.herokuapp.com/)
+
 ## Getting Started
 
 - Run git clone https://github.com/see-why/RailsRecipe.git to get a local clone
